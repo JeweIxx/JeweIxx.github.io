@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  zoom: 135%;
 }
 
 .App {
@@ -22,6 +21,7 @@ body {
   backdrop-filter: blur(51px);
   border-radius: 39px;
   padding: 17px;
+  zoom: 120%;
 }
 .buttons {
   display: grid;
