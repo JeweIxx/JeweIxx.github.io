@@ -10,10 +10,10 @@ function App() {
   
 
   return (
-    <div className="App">
+    <main className="App">
       <Calculator />
 
-    </div>
+    </main>
       
   )
 }
