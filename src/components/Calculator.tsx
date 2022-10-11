@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 function Calculator() {
     
     const [calc, setCalc] = useState("")
-    const [oldAnswer, setOldAnswer] = useState([])
+    const [oldAnswer, setOldAnswer] = useState<string[]>([])
     const [calculated, setCalculated] = useState(true)
     
     const ops : string[] = ['/','*','+','-','.']
