@@ -9,6 +9,8 @@ function Calculator() {
     
     const ops : string[] = ['/','*','+','-','.']
 
+    
+
     const updateCalc = (value: string) => {
         if (
             ops.includes(value) && calc === '' ||
@@ -46,7 +48,9 @@ function Calculator() {
 
         ]))
     },[calc])
-    function Zesty(){
+
+    //changed function name to actually mean something
+    function hideCalculated(){
         setCalculated(true)
     }
    
@@ -166,7 +170,7 @@ function Calculator() {
             
             <button   
                 className='button operators' 
-                onClick={function(event){ calculate(); Zesty()}}
+                onClick={function(event){ calculate(); hideCalculated()}}
                 >
                 =
                 </button>
