@@ -48,12 +48,15 @@ function Calculator() {
             ...prevoldanswer, calc
 
         ]))
-        setCalculationHistory(prevCalculatedHistory  => [
-            ...prevCalculatedHistory, calc
-        ])
-
-        console.log(calculationHistory)
     },[calc])
+
+
+    function history (){
+            setCalculationHistory(prevCalculatedHistory  => [
+            ...prevCalculatedHistory, oldAnswer[oldAnswer.length+2]
+            ])
+        console.log(calculationHistory)
+    }
 
     //changed function name to actually mean something
     function hideCalculated(){
@@ -65,7 +68,7 @@ function Calculator() {
 
   return (
     <div className="calculator">
-      <svg width="24" className="historyButton"height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="24" onClick={history}className="historyButton"height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.7143 0C8.03429 0 3.42857 4.47778 3.42857 10H0L4.44571 14.3222L4.52571 14.4778L9.14286 10H5.71429C5.71429 5.7 9.29143 2.22222 13.7143 2.22222C18.1371 2.22222 21.7143 5.7 21.7143 10C21.7143 14.3 18.1371 17.7778 13.7143 17.7778C11.5086 17.7778 9.50857 16.9 8.06857 15.4889L6.44571 17.0667C8.30857 18.8778 10.8686 20 13.7143 20C19.3943 20 24 15.5222 24 10C24 4.47778 19.3943 0 13.7143 0ZM12.5714 5.55556V11.1111L17.4629 13.9333L18.2857 12.5889L14.2857 10.2778V5.55556H12.5714Z" fill="#D4D4D2"/>
       </svg>
         <div className="topPart">
