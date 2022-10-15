@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react'
 
 function Calculator() {
     
-    const [calc, setCalc] = useState("")
+    const [calc, setCalc] = useState<string>("")
     const [oldAnswer, setOldAnswer] = useState<string[]>([])
-    const [calculated, setCalculated] = useState(true)
+    const [calculated, setCalculated] = useState<boolean>(true)
+    const [calculationHistory, setCalculationHistory] = useState<string[]>([])
     
     const ops : string[] = ['/','*','+','-','.']
 
@@ -47,12 +48,19 @@ function Calculator() {
             ...prevoldanswer, calc
 
         ]))
+        setCalculationHistory(prevCalculatedHistory  => [
+            ...prevCalculatedHistory, calc
+        ])
+
+        console.log(calculationHistory)
     },[calc])
 
     //changed function name to actually mean something
     function hideCalculated(){
         setCalculated(true)
     }
+
+
    
 
   return (
