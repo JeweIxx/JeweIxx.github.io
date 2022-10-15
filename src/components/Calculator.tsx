@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 
 function Calculator() {
     
-    const [calc, setCalc] = useState("")
+    const [calc, setCalc] = useState<string>("")
     const [oldAnswer, setOldAnswer] = useState<string[]>([])
-    const [calculated, setCalculated] = useState(true)
+    const [calculated, setCalculated] = useState<boolean>(true)
     
     const ops : string[] = ['/','*','+','-','.']
 
