@@ -46,7 +46,9 @@ function Calculator() {
 
         ]))
     },[calc])
-    function Zesty(){
+
+    //changed function name to actually mean somethnig
+    function hideCalculated(){
         setCalculated(true)
     }
    
@@ -166,7 +168,7 @@ function Calculator() {
             
             <button   
                 className='button operators' 
-                onClick={function(event){ calculate(); Zesty()}}
+                onClick={function(event){ calculate(); hideCalculated()}}
                 >
                 =
                 </button>
