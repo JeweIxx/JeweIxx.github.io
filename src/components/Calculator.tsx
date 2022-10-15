@@ -9,6 +9,8 @@ function Calculator() {
     
     const ops : string[] = ['/','*','+','-','.']
 
+    
+
     const updateCalc = (value: string) => {
         if (
             ops.includes(value) && calc === '' ||
@@ -47,7 +49,7 @@ function Calculator() {
         ]))
     },[calc])
 
-    //changed function name to actually mean somethnig
+    //changed function name to actually mean something
     function hideCalculated(){
         setCalculated(true)
     }
